@@ -1,0 +1,431 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Privacidad de Maderapp</title>
+<meta name="description" content="Política de privacidad de Maderapp: qué datos no recogemos, qué recoge la publicidad de terceros y cómo gestionar tu consentimiento.">
+<style>
+  :root{
+    --bg:#F6F4EF;
+    --surface:#FFFFFF;
+    --surface-2:#EFEBE2;
+    --border:#DED7C8;
+    --text:#2A2521;
+    --text-muted:#665C50;
+    --accent:#A9762C;
+    --accent-ink:#5B3E13;
+    --teal:#4A5D5A;
+    --teal-surface:#E7EEEC;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1815;
+      --surface:#242019;
+      --surface-2:#2D2820;
+      --border:#3C352B;
+      --text:#EFE9E0;
+      --text-muted:#B3A897;
+      --accent:#D8A24F;
+      --accent-ink:#F3D9A6;
+      --teal:#8FB3AC;
+      --teal-surface:#20302C;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1815;
+    --surface:#242019;
+    --surface-2:#2D2820;
+    --border:#3C352B;
+    --text:#EFE9E0;
+    --text-muted:#B3A897;
+    --accent:#D8A24F;
+    --accent-ink:#F3D9A6;
+    --teal:#8FB3AC;
+    --teal-surface:#20302C;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Source Sans 3", -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    padding-inline: 20px;
+    padding-block: 28px 64px;
+  }
+  h1,h2,h3{
+    font-family: "Fraunces", Georgia, serif;
+    color: var(--text);
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  main{
+    max-width: 700px;
+    margin-inline: auto;
+  }
+
+  /* ── Cabecera ─────────────────────────────────────────── */
+  header.top{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    max-width:700px; margin-inline:auto; margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand svg{ width:30px; height:30px; flex-shrink:0; }
+  .brand span{ font-family:"Fraunces", serif; font-weight:600; font-size:1.15rem; }
+
+  .lang-toggle{
+    display:flex; border:1px solid var(--border); border-radius:999px; overflow:hidden;
+    font-size:0.82rem; font-weight:600;
+  }
+  .lang-toggle button{
+    appearance:none; border:0; background:transparent; color:var(--text-muted);
+    padding:7px 14px; cursor:pointer; font:inherit; font-weight:600;
+  }
+  .lang-toggle button[aria-pressed="true"]{ background: var(--accent); color:#2A2521; }
+  :root[data-theme="dark"] .lang-toggle button[aria-pressed="true"],
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .lang-toggle button[aria-pressed="true"]{ color:#241A08; }
+  }
+
+  /* ── Hero / resumen ───────────────────────────────────── */
+  .eyebrow{
+    color: var(--accent-ink);
+    font-size:0.78rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  h1{ font-size: clamp(1.6rem, 5vw, 2.15rem); margin: 0 0 6px; }
+  .updated{ color: var(--text-muted); font-size:0.9rem; margin-bottom: 22px; }
+
+  .tldr{
+    background: var(--teal-surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 30px;
+  }
+  .tldr h2{ font-size:1rem; margin:0 0 10px; font-family: inherit; color: var(--teal); }
+  .tldr ul{ margin:0; padding-left: 1.1em; display:grid; gap:6px; }
+  .tldr li::marker{ color: var(--teal); }
+
+  /* ── Secciones ────────────────────────────────────────── */
+  section{ margin-bottom: 30px; }
+  h2{ font-size:1.25rem; margin: 0 0 10px; padding-top: 8px; }
+  h2 .num{ color: var(--accent); font-variant-numeric: tabular-nums; margin-right:8px; }
+  p{ margin: 0 0 12px; }
+  ul{ padding-left: 1.2em; margin: 0 0 12px; display:grid; gap:6px; }
+
+  .card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin: 14px 0;
+  }
+  .card strong{ color: var(--accent-ink); }
+
+  table{ width:100%; border-collapse: collapse; margin: 10px 0 6px; font-size:0.94rem; }
+  th,td{ text-align:left; padding:9px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  th{ color: var(--text-muted); font-weight:600; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.04em; }
+  .tw{ overflow-x:auto; }
+
+  a{ color: var(--accent-ink); text-decoration-color: var(--accent); text-underline-offset: 2px; }
+
+  .contact-box{
+    background: var(--surface-2);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .contact-box .pending{
+    display:inline-block;
+    background: var(--accent);
+    color:#2A2521;
+    font-weight:700;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size:0.85rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .contact-box .pending{ color:#241A08; }
+  }
+  :root[data-theme="dark"] .contact-box .pending{ color:#241A08; }
+
+  footer{
+    max-width:700px; margin: 40px auto 0; padding-top:18px;
+    border-top:1px solid var(--border);
+    color: var(--text-muted); font-size:0.85rem;
+    display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+  }
+
+  [data-lang="en"]{ display:none; }
+  [hidden]{ display:none !important; }
+
+  @media (max-width: 480px){
+    header.top{ margin-bottom:20px; }
+    .card, .tldr{ padding:14px 14px; }
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+<header class="top">
+  <div class="brand">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="3" y="20" width="26" height="4.5" rx="1.2" fill="var(--accent)"/>
+      <rect x="5" y="14" width="22" height="4.5" rx="1.2" fill="var(--teal)"/>
+      <rect x="7" y="8" width="18" height="4.5" rx="1.2" fill="var(--accent-ink)"/>
+    </svg>
+    <span>Maderapp</span>
+  </div>
+  <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+    <button type="button" data-set-lang="es" aria-pressed="true">Español</button>
+    <button type="button" data-set-lang="en" aria-pressed="false">English</button>
+  </div>
+</header>
+
+<main>
+  <!-- ══════════════════════ ESPAÑOL ══════════════════════ -->
+  <div data-lang="es">
+    <p class="eyebrow">Política de privacidad</p>
+    <h1>Tu madera, tus cálculos, tu teléfono</h1>
+    <p class="updated">Última actualización: 23 de septiembre de 2026</p>
+
+    <div class="tldr">
+      <h2>En resumen</h2>
+      <ul>
+        <li>Maderapp no tiene cuenta, no tiene servidor propio y no recoge tus datos personales.</li>
+        <li>Tus cálculos (medidas, precios, historial) se guardan solo en tu teléfono.</li>
+        <li>Mostramos un anuncio de un tercero (Google AdMob), que puede recoger algunos datos técnicos para eso — lo explicamos abajo, con cómo gestionarlo.</li>
+      </ul>
+    </div>
+
+    <section>
+      <h2><span class="num">1</span>Qué es Maderapp</h2>
+      <p>
+        Maderapp es una calculadora de madera: conviertes medidas a metros cúbicos, pie tablar o
+        pie cúbico, le pones un precio y guardas el resultado si quieres. Funciona sin conexión,
+        sin registro y sin cuenta de usuario.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">2</span>Datos que no recogemos</h2>
+      <p>Maderapp no te pide ni recoge tu nombre, correo, teléfono, ubicación ni ningún dato de identificación.</p>
+      <div class="card">
+        <strong>Todo lo que calculas se queda en tu dispositivo.</strong> Las medidas, los precios,
+        las etiquetas y el historial de cálculos se guardan en la base de datos local del teléfono
+        (Room) y en sus preferencias (DataStore). No existe ningún servidor de Maderapp al que
+        estos datos viajen — no lo hay porque no lo hemos construido, no porque lo hayamos
+        desactivado.
+      </div>
+      <p>Si desinstalas la app, o borras sus datos desde los ajustes de Android, ese historial desaparece por completo y no queda copia en ningún sitio.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">3</span>Publicidad de terceros (Google AdMob)</h2>
+      <p>
+        Maderapp es gratuita y se sostiene con un único banner publicitario, servido por
+        <strong>Google AdMob</strong>, anclado en la parte inferior de la pantalla. Nunca aparece
+        publicidad al abrir la app, ni entre lo que escribes y el resultado, ni mientras el
+        teclado está abierto.
+      </p>
+      <p>Para mostrar y medir ese anuncio, Google puede recoger:</p>
+      <div class="tw">
+        <table>
+          <tr><th>Dato</th><th>Para qué</th></tr>
+          <tr><td>Identificador de publicidad del dispositivo</td><td>Personalización y medición de anuncios</td></tr>
+          <tr><td>Dirección IP (aproximada)</td><td>Ubicación general y cumplimiento normativo por región</td></tr>
+          <tr><td>Interacción con el anuncio</td><td>Medir impresiones y clics</td></tr>
+        </table>
+      </div>
+      <p>
+        Esto lo gestiona Google, no Maderapp, según su propia
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad</a>
+        y su <a href="https://www.google.com/about/company/user-consent-policy/" target="_blank" rel="noopener">política de consentimiento del usuario</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">4</span>Tu consentimiento sobre publicidad</h2>
+      <p>
+        Si te encuentras en el Espacio Económico Europeo o el Reino Unido, Maderapp te pregunta tu
+        consentimiento antes de que aparezca el primer anuncio, mediante el formulario estándar de
+        Google (User Messaging Platform). Puedes cambiar tu elección en cualquier momento desde:
+      </p>
+      <div class="card">
+        <strong>Ajustes → Privacidad → Consentimiento de anuncios</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">5</span>Permisos del dispositivo</h2>
+      <p>
+        Maderapp solo pide acceso a <strong>Internet</strong>, necesario para cargar el banner
+        publicitario. No pide cámara, micrófono, ubicación, contactos ni almacenamiento externo.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">6</span>Menores de edad</h2>
+      <p>
+        Maderapp es una herramienta de cálculo pensada para carpinteros, madereros y profesionales
+        del sector, no está dirigida a menores y no recoge intencionadamente datos de menores de edad.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">7</span>Cambios en esta política</h2>
+      <p>
+        Si esta política cambia, actualizaremos la fecha de la cabecera y, si el cambio es
+        relevante, lo indicaremos también en la ficha de la app en Google Play.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">8</span>Contacto</h2>
+      <div class="contact-box">
+        <p style="margin:0">
+          Para cualquier duda sobre esta política, escribe a
+          <span class="pending">[correo de contacto pendiente]</span>.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══════════════════════ ENGLISH ══════════════════════ -->
+  <div data-lang="en">
+    <p class="eyebrow">Privacy policy</p>
+    <h1>Your lumber, your calculations, your phone</h1>
+    <p class="updated">Last updated: September 23, 2026</p>
+
+    <div class="tldr">
+      <h2>In short</h2>
+      <ul>
+        <li>Maderapp has no account, no server of its own, and does not collect your personal data.</li>
+        <li>Your calculations (measurements, prices, history) are saved only on your phone.</li>
+        <li>We show one third-party ad (Google AdMob), which may collect some technical data for that — explained below, along with how to manage it.</li>
+      </ul>
+    </div>
+
+    <section>
+      <h2><span class="num">1</span>What Maderapp is</h2>
+      <p>
+        Maderapp is a wood calculator: you convert measurements to cubic meters, board feet, or
+        cubic feet, price the result, and optionally save it. It works offline, with no sign-up
+        and no user account.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">2</span>Data we don't collect</h2>
+      <p>Maderapp never asks for or collects your name, email, phone number, location, or any identifying data.</p>
+      <div class="card">
+        <strong>Everything you calculate stays on your device.</strong> Measurements, prices,
+        labels and calculation history are stored in the phone's local database (Room) and its
+        preferences (DataStore). There is no Maderapp server for this data to travel to — there
+        isn't one because we haven't built one, not because we turned it off.
+      </div>
+      <p>If you uninstall the app, or clear its data from Android settings, that history is gone completely, with no copy anywhere.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">3</span>Third-party advertising (Google AdMob)</h2>
+      <p>
+        Maderapp is free and supported by a single ad banner, served by <strong>Google AdMob</strong>,
+        anchored to the bottom of the screen. Ads never appear when opening the app, never between
+        your input and the result, and never while the keyboard is open.
+      </p>
+      <p>To show and measure that ad, Google may collect:</p>
+      <div class="tw">
+        <table>
+          <tr><th>Data</th><th>Purpose</th></tr>
+          <tr><td>Device advertising identifier</td><td>Ad personalization and measurement</td></tr>
+          <tr><td>IP address (approximate)</td><td>General location and regional compliance</td></tr>
+          <tr><td>Ad interaction</td><td>Measuring impressions and clicks</td></tr>
+        </table>
+      </div>
+      <p>
+        This is handled by Google, not by Maderapp, under its own
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>
+        and <a href="https://www.google.com/about/company/user-consent-policy/" target="_blank" rel="noopener">user consent policy</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">4</span>Your advertising consent</h2>
+      <p>
+        If you're in the European Economic Area or the UK, Maderapp asks for your consent before
+        the first ad appears, using Google's standard form (User Messaging Platform). You can
+        change your choice at any time from:
+      </p>
+      <div class="card">
+        <strong>Settings → Privacy → Ad consent</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">5</span>Device permissions</h2>
+      <p>
+        Maderapp only requests <strong>Internet</strong> access, needed to load the ad banner. It
+        does not request camera, microphone, location, contacts, or external storage.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">6</span>Children</h2>
+      <p>
+        Maderapp is a calculation tool built for carpenters, lumber dealers and trade
+        professionals. It is not directed at children and does not knowingly collect data from
+        minors.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">7</span>Changes to this policy</h2>
+      <p>
+        If this policy changes, we'll update the date at the top and, for any meaningful change,
+        note it on the app's Google Play listing as well.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">8</span>Contact</h2>
+      <div class="contact-box">
+        <p style="margin:0">
+          For any question about this policy, write to
+          <span class="pending">[contact email pending]</span>.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <span>Maderapp</span>
+    <span data-lang="es">Documento de referencia — verifica el contacto antes de publicar.</span>
+    <span data-lang="en" hidden>Reference document — confirm the contact email before publishing.</span>
+  </footer>
+</main>
+
+<script>
+(function(){
+  function apply(lang){
+    document.querySelectorAll('[data-lang]').forEach(function(el){
+      el.hidden = el.getAttribute('data-lang') !== lang;
+    });
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn){
+      btn.setAttribute('aria-pressed', btn.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+    });
+    document.documentElement.setAttribute('lang', lang);
+    try { localStorage.setItem('maderapp-privacy-lang', lang); } catch (e) {}
+  }
+  document.querySelectorAll('.lang-toggle button').forEach(function(btn){
+    btn.addEventListener('click', function(){ apply(btn.getAttribute('data-set-lang')); });
+  });
+  var saved = null;
+  try { saved = localStorage.getItem('maderapp-privacy-lang'); } catch (e) {}
+  apply(saved === 'en' ? 'en' : 'es');
+})();
+</script>
+
+</body></html>
